@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 /*
 PrimeExpert, tool to test if a number is prime
-Copyright (C) 2008-2013 Richel Bilderbeek
+Copyright (C) 2008-2015 Richel Bilderbeek
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
-#include "toolprimeexpertmenudialog.h"
+#include "primeexpertmenudialog.h"
 #pragma GCC diagnostic pop
 
 int main(int argc, char *argv[])

@@ -28,7 +28,7 @@ ribi::About ribi::PrimeExpertMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "PrimeExpert",
     "prime look-up table",
-    "the 11th of Oktober 2013",
+    "November 21sh of 2015",
     "2008-2015",
     "http://www.richelbilderbeek.nl/ToolPrimeExpert.htm",
     GetVersion(),
@@ -54,18 +54,9 @@ ribi::Help ribi::PrimeExpertMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::PrimeExpertMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const ribi::Program> p {
-    new ProgramPrimeExpert
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::PrimeExpertMenuDialog::GetVersion() const noexcept
 {
-  return "2.2";
+  return "3.0";
 }
 
 std::vector<std::string> ribi::PrimeExpertMenuDialog::GetVersionHistory() const noexcept
@@ -75,6 +66,7 @@ std::vector<std::string> ribi::PrimeExpertMenuDialog::GetVersionHistory() const 
     "2011-02-26: Version 2.0: port to Qt Creator",
     "2013-10-11: Version 2.1: conformized for ProjectRichelBilderbeek",
     "2013-11-04: Version 2.2: conformized for ProjectRichelBilderbeekConsole",
+    "2015-11-21: Version 3.0: moved to own GitHub"
   };
 }
 

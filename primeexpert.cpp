@@ -50,14 +50,15 @@ int ribi::PrimeExpert::CalculateMax(const int x)
 
 std::string ribi::PrimeExpert::GetVersion() noexcept
 {
-  return "2.0";
+  return "3.0";
 }
 
 std::vector<std::string> ribi::PrimeExpert::GetVersionHistory() noexcept
 {
   return {
     "2008-07-12: Version 1.0: initial version in C++ Builder",
-    "2011-02-26: Version 2.0: port to Qt Creator"
+    "2011-02-26: Version 2.0: port to Qt Creator",
+    "2015-11-21: Version 3.0: moved to own GitHub"
   };
 }
 

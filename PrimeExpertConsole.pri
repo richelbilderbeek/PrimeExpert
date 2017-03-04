@@ -1,13 +1,10 @@
-INCLUDEPATH += \
-    ../PrimeExpert
+INCLUDEPATH += $$PWD
 
 SOURCES += \
-    ../PrimeExpert/primeexpert.cpp \
-    ../PrimeExpert/primeexpertmenudialog.cpp
+    $$PWD/primeexpert.cpp \
+    $$PWD/primeexpertmenudialog.cpp
 
 HEADERS += \
-    ../PrimeExpert/primeexpert.h \
-    ../PrimeExpert/primeexpertmenudialog.h
+    $$PWD/primeexpert.h \
+    $$PWD/primeexpertmenudialog.h
 
-OTHER_FILES += \
-    ../PrimeExpert/LICENSE

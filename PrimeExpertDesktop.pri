@@ -1,13 +1,13 @@
-include(../PrimeExpert/PrimeExpertConsole.pri)
+include(PrimeExpertConsole.pri)
 
 SOURCES += \
-    ../PrimeExpert/qtprimeexpertmenudialog.cpp \
-    ../PrimeExpert/qtprimeexpertmaindialog.cpp
+    $$PWD/qtprimeexpertmenudialog.cpp \
+    $$PWD/qtprimeexpertmaindialog.cpp
 
 HEADERS += \
-    ../PrimeExpert/qtprimeexpertmenudialog.h \
-    ../PrimeExpert/qtprimeexpertmaindialog.h
+    $$PWD/qtprimeexpertmenudialog.h \
+    $$PWD/qtprimeexpertmaindialog.h
 
 FORMS += \
-    ../PrimeExpert/qtprimeexpertmenudialog.ui \
-    ../PrimeExpert/qtprimeexpertmaindialog.ui
+    $$PWD/qtprimeexpertmenudialog.ui \
+    $$PWD/qtprimeexpertmaindialog.ui

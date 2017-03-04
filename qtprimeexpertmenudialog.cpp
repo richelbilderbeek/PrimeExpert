@@ -19,9 +19,6 @@ ribi::QtToolPrimeExpertMenuDialog::QtToolPrimeExpertMenuDialog(QWidget *parent) 
     QtHideAndShowDialog(parent),
     ui(new Ui::QtToolPrimeExpertMenuDialog)
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   ui->setupUi(this);
 }
 
@@ -56,15 +53,3 @@ void ribi::QtToolPrimeExpertMenuDialog::on_button_start_clicked()
   d.setStyleSheet(this->styleSheet());
   ShowChild(&d);
 }
-
-#ifndef NDEBUG
-void ribi::QtToolPrimeExpertMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif

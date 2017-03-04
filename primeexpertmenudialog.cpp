@@ -3,23 +3,15 @@
 #include <cassert>
 #include <iostream>
 
-#include "richelbilderbeekprogram.h"
-#include "testtimer.h"
-#include "trace.h"
-
 int ribi::PrimeExpertMenuDialog::ExecuteSpecific(const std::vector<std::string>& argv) noexcept
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   const int argc = static_cast<int>(argv.size());
   if (argc == 1)
   {
     std::cout << this->GetHelp() << '\n';
-    return 1;
+    return 0;
   }
-  assert(!"TODO");
-  return 1;
+  return 0;
 }
 
 ribi::About ribi::PrimeExpertMenuDialog::GetAbout() const noexcept
@@ -34,8 +26,6 @@ ribi::About ribi::PrimeExpertMenuDialog::GetAbout() const noexcept
     GetVersion(),
     GetVersionHistory()
   );
-  a.AddLibrary("TestTimer version: " + TestTimer::GetVersion());
-  a.AddLibrary("Trace version: " + Trace::GetVersion());
   return a;
 }
 
@@ -69,15 +59,3 @@ std::vector<std::string> ribi::PrimeExpertMenuDialog::GetVersionHistory() const 
     "2015-11-21: Version 3.0: moved to own GitHub"
   };
 }
-
-#ifndef NDEBUG
-void ribi::PrimeExpertMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif

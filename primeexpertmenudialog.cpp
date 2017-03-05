@@ -11,7 +11,7 @@ int ribi::PrimeExpertMenuDialog::ExecuteSpecific(const std::vector<std::string>&
     std::cout << this->GetHelp() << '\n';
     return 0;
   }
-  return 0;
+  std::cout << PrimeExpert().IsPrime(std::stoi(argv[1]) << '\n';
 }
 
 ribi::About ribi::PrimeExpertMenuDialog::GetAbout() const noexcept

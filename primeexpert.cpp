@@ -9,6 +9,20 @@ ribi::PrimeExpert::PrimeExpert()
   : mPrimes{}
 {
   mPrimes.push_back(2);
+  assert(CalculateMax( 4) == 3); //When examining 4, divide (from 2) to 3
+  assert(CalculateMax( 5) == 3);
+  assert(CalculateMax( 6) == 3);
+  assert(CalculateMax( 7) == 3);
+  assert(CalculateMax( 8) == 3);
+  assert(CalculateMax( 9) == 4); //When examining 9, divide (from 2) to 4
+  assert(CalculateMax(10) == 4);
+  assert(CalculateMax(11) == 4);
+  assert(CalculateMax(12) == 4);
+  assert(CalculateMax(13) == 4);
+  assert(CalculateMax(14) == 4);
+  assert(CalculateMax(15) == 4);
+  assert(CalculateMax(16) == 5); //When examining 16, divide (from 2) to 5
+  assert(CalculateMax(17) == 5);
 }
 
 void ribi::PrimeExpert::CalculateNextPrime()
@@ -52,26 +66,12 @@ bool ribi::PrimeExpert::IsPrime(const int x)
 {
   assert(x > 2);
   //Calculate the maximum value for devision
-  const int max = CalculateMax(x);
-
-  assert(CalculateMax( 4) == 3); //When examining 4, divide (from 2) to 3
-  assert(CalculateMax( 5) == 3);
-  assert(CalculateMax( 6) == 3);
-  assert(CalculateMax( 7) == 3);
-  assert(CalculateMax( 8) == 3);
-  assert(CalculateMax( 9) == 4); //When examining 9, divide (from 2) to 4
-  assert(CalculateMax(10) == 4);
-  assert(CalculateMax(11) == 4);
-  assert(CalculateMax(12) == 4);
-  assert(CalculateMax(13) == 4);
-  assert(CalculateMax(14) == 4);
-  assert(CalculateMax(15) == 4);
-  assert(CalculateMax(16) == 5); //When examining 16, divide (from 2) to 5
-  assert(CalculateMax(17) == 5);
 
   //Collect enough prime numbers to find if x is prime,
   //  if these are not yet present
   GrowTo(x);
+
+  const int max = CalculateMax(x);
 
   for (int i=0; ;++i)
   {

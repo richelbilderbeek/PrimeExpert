@@ -42,6 +42,12 @@ std::vector<std::string> ribi::PrimeExpert::GetVersionHistory() noexcept
   };
 }
 
+void ribi::PrimeExpert::GrowTo(const int x)
+{
+  while ( mPrimes.back() < CalculateMax(x) )
+    CalculateNextPrime();
+}
+
 bool ribi::PrimeExpert::IsPrime(const int x)
 {
   assert(x > 2);
@@ -65,8 +71,7 @@ bool ribi::PrimeExpert::IsPrime(const int x)
 
   //Collect enough prime numbers to find if x is prime,
   //  if these are not yet present
-  while ( mPrimes.back() < CalculateMax(x) )
-    CalculateNextPrime();
+  GrowTo(x);
 
   for (int i=0; ;++i)
   {

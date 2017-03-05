@@ -20,6 +20,7 @@ struct PrimeExpert
 
   void CalculateNextPrime();
   int CalculateMax(const int x);
+  void GrowTo(const int x);
   friend std::ostream& operator<<(std::ostream&, const PrimeExpert&);
 };
 

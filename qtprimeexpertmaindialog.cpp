@@ -9,8 +9,6 @@
 #include "about.h"
 #include "qtaboutdialog.h"
 #include "primeexpert.h"
-#include "testtimer.h"
-#include "trace.h"
 #include "ui_qtprimeexpertmaindialog.h"
 #pragma GCC diagnostic pop
 

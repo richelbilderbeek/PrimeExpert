@@ -10,8 +10,6 @@
 #include "qtaboutdialog.h"
 #include "qtprimeexpertmaindialog.h"
 #include "qthideandshowdialog.h"
-#include "testtimer.h"
-#include "trace.h"
 #include "ui_qtprimeexpertmenudialog.h"
 #pragma GCC diagnostic pop
 

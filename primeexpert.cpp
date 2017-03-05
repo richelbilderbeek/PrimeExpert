@@ -64,6 +64,8 @@ void ribi::PrimeExpert::GrowTo(const int x)
 
 bool ribi::PrimeExpert::IsPrime(const int x)
 {
+  if (x < 2) return false;
+  if (x == 2) return true;
   assert(x > 2);
   //Calculate the maximum value for devision
 

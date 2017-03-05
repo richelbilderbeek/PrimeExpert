@@ -38,7 +38,7 @@ script:
   # Console
   - qmake -qt=qt5 PrimeExpertConsole.pro
   - make debug
-   ./PrimeExpertConsole
+   ./PrimeExpertConsole 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
   # Desktop
   - qmake -qt=qt5 PrimeExpertDesktop.pro
   - make debug

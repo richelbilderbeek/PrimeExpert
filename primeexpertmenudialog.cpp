@@ -3,15 +3,25 @@
 #include <cassert>
 #include <iostream>
 
+#include "primeexpert.h"
+
 int ribi::PrimeExpertMenuDialog::ExecuteSpecific(const std::vector<std::string>& argv) noexcept
 {
   const int argc = static_cast<int>(argv.size());
+  assert(argc > 0);
   if (argc == 1)
   {
     std::cout << this->GetHelp() << '\n';
     return 0;
   }
-  std::cout << PrimeExpert().IsPrime(std::stoi(argv[1]) << '\n';
+  PrimeExpert p;
+  std::cout << std::boolalpha;
+  for (int i{1}; i!=argc; ++i)
+  {
+    const int value{std::stoi(argv[i])};
+    std::cout << value << ": " << p.IsPrime(value) << '\n';
+  }
+  return 0;
 }
 
 ribi::About ribi::PrimeExpertMenuDialog::GetAbout() const noexcept
@@ -39,7 +49,8 @@ ribi::Help ribi::PrimeExpertMenuDialog::GetHelp() const noexcept
     }
     ,
     {
-
+      "PrimeExpert 123",
+      "PrimeExpert 1 4 9 16"
     }
   );
 }

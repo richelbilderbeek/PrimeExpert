@@ -1,5 +1,7 @@
 # PrimeExpert
 
+[![Codecov](https://codecov.io/gh/richelbilderbeek/PrimeExpert/branch/main/graph/badge.svg)](https://codecov.io/gh/richelbilderbeek/PrimeExpert)
+
 [Go to the nicely rendered website](https://richelbilderbeek.github.io/PrimeExpert/).
 
 C++ tool to test a class for fast prime lookup.
